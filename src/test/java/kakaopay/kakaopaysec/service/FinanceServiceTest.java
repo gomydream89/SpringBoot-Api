@@ -27,7 +27,7 @@ public class FinanceServiceTest {
 
     @BeforeEach
     void initDataBase() throws IOException {
-        //given
+        //Test 실행 시마다, DataBase 초기화
         dataService.saveFileToDatabase("data/데이터_관리점정보.csv");
         dataService.saveFileToDatabase("data/데이터_계좌정보.csv");
         dataService.saveFileToDatabase("data/데이터_거래내역.csv");
