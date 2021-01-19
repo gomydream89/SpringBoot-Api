@@ -80,35 +80,4 @@ public class FinanceServiceImpl implements FinanceService {
         List<Account> accountList = accountRepository.findByBrCd(brCd);
         return accountList;
     }
-
-
-
-
-//    @Override
-//    public Branch findByBrName(String brName) {
-//        // 관리점 명으로 조회하여 관리점 객체를 가져오는 메소드
-//        Branch branch = branchRepository.findByBrName(brName);
-//        return branch;
-//    }
-
-
-//    @Override
-//    public List<Map<String, Object>> getNonTrxCus() {
-//        // 결과 List
-//        Map<String, Object> ret = new LinkedHashMap<>();
-//
-//        // 2018 또는 2019년에 거래가 없는 고객을 조회
-//        List<Map<String, Object>> res = transactionRepository.getMaxSumAmt();
-//
-//        // 출력 json에 맞게 네이밍 설정
-//        for (Map<String, Object> dao : res) {
-//            Map<String, Object> dto = new LinkedHashMap<String,Object>();
-//            dto.put("year"     , dao.get("YEAR"));
-//            dto.put("name"     , dao.get("ACCT_NM"));
-//            dto.put("acctNo"   , dao.get("ACCT_NO"));
-//            ret.add(dto);
-//        }
-//
-//        return ret;
-//    }
 }
