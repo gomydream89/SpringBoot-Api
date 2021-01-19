@@ -11,9 +11,10 @@ import java.util.List;
 
 @Repository
 public class FinanceRepository {
-    final String PERSISTENCE_UNIT_NAME = "jpa";
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-    EntityManager em = emf.createEntityManager();
+    @PersistenceUnit
+    EntityManagerFactory emf;
+    @PersistenceContext
+    EntityManager em;
     JpaResultMapper jpaResultMapper = new JpaResultMapper();
 
     /* 1번 과제 : [거래내역]에서 연도,계좌 별 거래금액 합계 구한 후 [계좌]와 조인하여 계좌명 출력 */
