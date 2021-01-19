@@ -29,12 +29,16 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation group: 'com.opencsv', name: 'opencsv', version: '4.4'
+	implementation 'junit:junit:4.12'
 
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 	compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.0.Final'
 	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.2.Final'
 	compile group: 'ch.simas.qlrm', name: 'qlrm', version: '1.6.9'
+
+
+
 }
 
 test {

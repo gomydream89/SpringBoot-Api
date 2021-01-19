@@ -137,7 +137,7 @@ public class FinanceCortroller {
                 else
                     toBrCd = toBrInfo.getBrCd();    //이관 관리점코드
 
-                financeService.modifyByBrCode(bfBrCd, toBrCd);
+                financeService.mergeByBrCode(bfBrCd, toBrCd);
                 return new ResponseEntity<>(Collections.singletonMap("200", branchInDto.getBfBrName() + " is merged to " + branchInDto.getToBrName()), httpHeaders, HttpStatus.OK);
             }else
                 return new ResponseEntity<>(Collections.singletonMap("404", "enter the name of each branch"), httpHeaders, HttpStatus.NOT_FOUND);

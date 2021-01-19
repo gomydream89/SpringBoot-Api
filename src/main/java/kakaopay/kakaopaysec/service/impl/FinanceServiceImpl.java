@@ -1,5 +1,6 @@
 package kakaopay.kakaopaysec.service.impl;
 
+import kakaopay.kakaopaysec.domain.entity.Account;
 import kakaopay.kakaopaysec.domain.entity.Branch;
 import kakaopay.kakaopaysec.domain.repository.AccountRepository;
 import kakaopay.kakaopaysec.domain.repository.BranchRepository;
@@ -61,7 +62,7 @@ public class FinanceServiceImpl implements FinanceService {
 
     @Override
     @Transactional
-    public void modifyByBrCode(String bfBrCd, String toBrCd){
+    public void mergeByBrCode(String bfBrCd, String toBrCd){
         // 계좌정보의 관리점을 수정
         accountRepository.modifyBrCd(bfBrCd, toBrCd);
     }
@@ -73,6 +74,12 @@ public class FinanceServiceImpl implements FinanceService {
         return result;
     }
 
+    @Override
+    public List<Account> findByBrCd(String brCd) {
+        // 관리점 코드로 계좌정보 목록 조회
+        List<Account> accountList = accountRepository.findByBrCd(brCd);
+        return accountList;
+    }
 
 
 

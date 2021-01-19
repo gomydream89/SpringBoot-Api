@@ -1,5 +1,6 @@
 package kakaopay.kakaopaysec.service;
 
+import kakaopay.kakaopaysec.domain.entity.Account;
 import kakaopay.kakaopaysec.domain.entity.Branch;
 import kakaopay.kakaopaysec.dto.AccountAmtOutDto;
 import kakaopay.kakaopaysec.dto.AccountOutDto;
@@ -14,7 +15,8 @@ public interface FinanceService {
     List<String> getAllYears();
 
     Branch findByBrName(String brNm);
-    void modifyByBrCode(String bfBrCd, String toBrCd);
+    void mergeByBrCode(String bfBrCd, String toBrCd);
     BranchOutDto getSumAmtBrInfo(String brCd);
+    List<Account> findByBrCd(String brCd);
 
 }

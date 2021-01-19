@@ -64,7 +64,7 @@ public class FinanceRepository {
     /* 3번 과제 : 연도에 해당하는 관리점 별 거래금액 합계를 구하고 합계 금액이 큰 순서로 출력 */
     public List<BranchOutDto> getSumAmtBrList(String year){
         String sql =  "SELECT\n" +
-                                "A.BR_CD, A.BR_NM, ROUND(B.SUM_AMT) AS SUM_AMT\n" +
+                                "A.BR_NM, A.BR_CD, ROUND(B.SUM_AMT) AS SUM_AMT\n" +
                         "FROM   BRANCH A\n" +
                         "JOIN   ( \n" +
                                 "SELECT\n" +
@@ -88,7 +88,7 @@ public class FinanceRepository {
     /* 4번 과제 : 입력한 지점의 거래금액 합계를 출력 */
     public BranchOutDto getSumAmtBrInfo(String brCd){
         String sql =  "SELECT\n" +
-                                "A.BR_CD, A.BR_NM, ROUND(B.SUM_AMT) AS SUM_AMT\n" +
+                                "A.BR_NM, A.BR_CD, ROUND(B.SUM_AMT) AS SUM_AMT\n" +
                         "FROM   BRANCH A\n" +
                         "JOIN   ( \n" +
                                     "SELECT\n" +
