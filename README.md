@@ -156,7 +156,7 @@ http://localhost:8080/apis/inquiry/noTrx?years=2019
 ```
 
 ### 3. 연도 별 관리점 별 거래금액 합계를 구하고 합계 금액이 큰 순서로 출력
-`GET /apis/inquiry/maxSumAmt`
+`GET /apis/inquiry/sumAmtAllBr`
 
 거래내역이 존재하는 전체 연도에 대해 출력
 
